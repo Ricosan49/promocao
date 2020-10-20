@@ -1,0 +1,60 @@
+<!DOCUMENT html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen" />
+	<script type="text/javascript" src="js/javascript1.js"></script>
+	<script type="text/javascript" src="js/js_1.9/jquery-1.8.2.js"></script>  
+    <script type="text/javascript" src="js/js_1.9/jquery-ui-1.9.1.custom.min.js"></script> 
+	<!---<style type="text/css">
+		#oba{
+			background:#f8f8f8;
+			margin: 10px auto;
+			box-shadow: 0 10px 100px #ccc;
+			padding: 20px;
+			box-sizing: border-box;
+			max-width: 500px;
+			height:400px;
+			width:300px;
+			} 
+	</style>-->
+      
+</head>
+<body>
+	<div>
+		
+		<div class=divbutton4>
+			<a href="foto4.html" action="oba" class=logo ><image border-radius=15px src=./icone/foto50.png></image></a>
+			<!--<button type=button class=logo src="./index.html">
+			<image border-radius=15px src=./icone/foto50.png></image>
+			</button>
+			<video autoplay="true" id="webCamera" class=video>
+			</video>-->
+			<!--<div id="sidebar">
+				<ul>
+					<li><a href="index.html" action="oba">Casa</a></li>
+					<li><a onclick="carregar('idex.html')" href="#">Home</a></li>
+					<li><a onclick="carregar('explore.html')" href="#">Explore</a></li>
+					<li><a onclick="carregar('users.html')" href="#">Users</a></li>
+					<li><a onclick="carregar('signOut.html')" href="#">Sign Out</a></li>
+				</ul>
+			</div>-->
+		</div>
+		<div id="oba"> 
+		</div> 
+	</div>
+	
+	
+</body>
+	<script>
+		function casa() {
+			//document.getElementById("oba").innerHTML = src("./index.html");
+			document.getElementById('oba').innerHTML = window.location.release("./index.html");
+		} 
+		function carregar(pagina){
+        $("#oba").load(pagina);
+		}
+	</script>
+</html>

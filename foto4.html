@@ -1,0 +1,45 @@
+<!DOCUMENT html>
+
+<html>
+	
+	<title>
+		Camera
+	</title>
+	<head>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen" />
+		
+	</head>
+	
+<body>
+	
+	<form>
+		<div class="cab">
+		<div class=a>
+				<a >Sua Promoção</a>
+			</div>
+			<div class=divbuttonvoltar>
+				<a href="index.html" ><image border-radius=15px src=./icone/voltarr50.png></image></a>
+			</div>
+						
+			<video id="video" class="video" autoplay >
+			<!--<button id="snap">Snap Photo</button>-->
+			<canvas id="canvas" ></canvas>
+		</div>
+	</form>
+	<script>
+		// Grab elements, create settings, etc.
+		var video = document.getElementById('video');
+		// Get access to the camera!
+		if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+		// Not adding `{ audio: true }` since we only want video now
+			navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+			//video.src = window.URL.createObjectURL(stream);
+			video.srcObject = stream;
+			video.play();
+			});
+		}
+		
+	</script>
+</body>
+
+</html>
